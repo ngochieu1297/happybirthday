@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A tiny birthday gift, wrapped with love." />
+    <meta name="theme-color" content="#fff4ed" />
+    <title>A Birthday Gift For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="petals" aria-hidden="true"></div>
+
+    <button class="sound-toggle" id="soundToggle" type="button" aria-label="Turn music on" aria-pressed="false">
+      <span class="sound-icon" aria-hidden="true">♫</span>
+      <span class="sound-label">music off</span>
+    </button>
+
+    <main>
+      <section class="hero" id="top" aria-labelledby="heroTitle">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span>A tiny gift, just for Gấu iu<span></span></p>
+          <h1 id="heroTitle"><span>Happy</span> Birthday!</h1>
+          <!-- <p class="hero-note">Today deserves a little extra sparkle, a lot of cake, and every soft, happy thing your heart can hold.</p> -->
+          <!-- <a class="scroll-cue" href="#wish">
+            <span>Open your surprise</span>
+            <span class="arrow" aria-hidden="true">↓</span>
+          </a> -->
+        </div>
+      </section>
+
+      <section class="wish-section" id="wish" aria-labelledby="wishTitle">
+        <div class="wish-card reveal">
+          <div class="tape tape-left" aria-hidden="true"></div>
+          <div class="tape tape-right" aria-hidden="true"></div>
+          <p class="handwritten">Make a wish...</p>
+          <h2 id="wishTitle">One little candle.<br />One very big wish.</h2>
+          <div class="cake" aria-hidden="true">
+            <div class="candle"><span class="flame"></span></div>
+            <div class="frosting"></div>
+            <div class="cake-body"><i></i><i></i><i></i></div>
+            <div class="plate"></div>
+          </div>
+          <button class="primary-button" id="wishButton" type="button">Close your eyes & make a wish</button>
+          <p class="wish-status" id="wishStatus" aria-live="polite">The candle is waiting for you ✨</p>
+        </div>
+      </section>
+
+      <section class="reasons" aria-labelledby="reasonsTitle">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span>Three birthday reminders<span></span></p>
+          <h2 id="reasonsTitle">For your next trip around the sun</h2>
+        </div>
+        <div class="note-grid">
+          <article class="note note-pink reveal">
+            <span class="note-number">01</span>
+            <span class="note-icon" aria-hidden="true">♥</span>
+            <h3>You are deeply loved</h3>
+            <p>More than you know, in more ways than anyone could fit inside a birthday card.</p>
+          </article>
+          <article class="note note-yellow reveal">
+            <span class="note-number">02</span>
+            <span class="note-icon" aria-hidden="true">☀</span>
+            <h3>You make days brighter</h3>
+            <p>Your small kindnesses, warm laughs, and wonderful way of being you truly matter.</p>
+          </article>
+          <article class="note note-blue reveal">
+            <span class="note-number">03</span>
+            <span class="note-icon" aria-hidden="true">✦</span>
+            <h3>Your best is still ahead</h3>
+            <p>May this year surprise you with brave beginnings and the loveliest little moments.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="letter-section" aria-labelledby="letterTitle">
+        <div class="letter-wrap reveal">
+          <div class="letter-copy">
+            <p class="eyebrow"><span></span>One last thing<span></span></p>
+            <h2 id="letterTitle">A letter wrapped in a hug</h2>
+            <p>Some wishes are too special to leave unopened.</p>
+          </div>
+          <button class="envelope" id="letterButton" type="button" aria-label="Open your birthday letter">
+            <span class="envelope-back"></span>
+            <span class="letter-peek">for you ♡</span>
+            <span class="envelope-front"></span>
+            <span class="envelope-flap"></span>
+            <span class="heart-seal">♥</span>
+          </button>
+          <p class="tap-note">tap the envelope</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made with <span aria-label="love">♥</span> and a little birthday magic</p>
+      <a href="#top">Back to the top ↑</a>
+    </footer>
+
+    <div class="gift-gate" id="giftGate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+      <div class="gate-stars" aria-hidden="true">✦　·　✧</div>
+      <div class="gift-box" aria-hidden="true">
+        <div class="gift-lid"><span></span></div>
+        <div class="gift-body"><span></span></div>
+      </div>
+      <p class="gate-kicker">psst... something arrived for you</p>
+      <h2 id="gateTitle">A little birthday surprise</h2>
+      <button class="unwrap-button" id="unwrapButton" type="button">Untie the ribbon <span>♡</span></button>
+      <p class="gate-note">best opened with sound on</p>
+    </div>
+
+    <div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close letter">×</button>
+      <div class="modal-paper">
+        <p class="handwritten">Gửi đến Ngọc iu của anh,</p>
+        <p>Chúc mừng sinh nhật em Gấu, chúc em tuổi mới sẽ có thật nhiều sức khoẻ, gặp nhiều may mắn, luôn luôn xinh đẹp và vui tươi. Anh mong cho những thử thách có tới cũng sẽ dịu dàng với em, em đã cố gắng nỗ lực, vất vả nhiều rùi. Thêm một điều nữa là tuổi mới bớt khóc nhè bớt suy nghĩ đi nhớ. Nếu có buồn gì thì kể mí anh, đừng tự ôm suy nghĩ trong lòng một mình.</p>
+        <p>Lâu rồi anh chưa viết thiệp cho em nhờ, lần này anh có ý tưởng độc đáo hơn nè. Vừa là kĩ năng mà anh giỏi nhất, em vừa đỡ phải đọc chữ xấu mà vẫn là tấm lòng của anh. Anh mong em nhận được món quà này sẽ thích nó.</p>
+        <p>Anh rất hạnh phúc khi có em kề bên. Vì giữa những ngày mệt mỏi nhất, em vẫn là lý do khiến anh mỉm cười. Cảm ơn em đã đến, ở lại và cho anh cảm giác được trân trọng và yêu thương thật lòng. Khiến cuộc sống tẻ nhạt của anh được tô màu hạnh phúc, chỉ cần có em bên cạnh, mọi điều khác với anh đều trở nên nhẹ nhàng hơn.</p>
+        <p>Chúng mình hãy cùng nhau tạo nên một năm thật rực rỡ nhé Gấu. Cùng nhau đi đến nhiều nơi, chụp nhiều ảnh đẹp, và điều anh mong nhất là chúng mình sẽ về chung một nhà. Trải qua nhiều chuyện cùng nhau, vấp ngã và trưởng thành cùng nhau, hãy cùng nắm chặt tay nhau thật lâu nữa nha.</p>
+        <p class="signature-icons" aria-label="Bubu face, heart, Dudu face">
+          <span class="bear-face bubu-face" aria-hidden="true"><i class="bear-eyes"></i><i class="bear-snout"></i></span>
+          <span class="signature-heart" aria-hidden="true">♥</span>
+          <span class="bear-face dudu-face" aria-hidden="true"><i class="bear-eyes"></i><i class="bear-snout"></i></span>
+        </p>
+        <p class="postscript">Tái bút: Yêu em nhiều lắm ♡</p>
+      </div>
+    </div>
+
+    <audio id="birthdayMusic" src="./assets/take-me-to-your-heart.mp3" preload="auto" loop></audio>
+    <canvas id="confetti" aria-hidden="true"></canvas>
+    <script src="./script.js"></script>
+  </body>
+</html>
